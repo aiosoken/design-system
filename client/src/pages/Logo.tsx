@@ -1,7 +1,7 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@lib/components/card";
+import { Alert, AlertDescription, AlertTitle } from "@lib/components/alert";
 import { Download, Info, X, Check } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@lib/components/button";
 
 export default function Logo() {
   const handleDownload = (filename: string) => {

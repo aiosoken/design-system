@@ -1,24 +1,24 @@
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Checkbox } from "@/components/ui/checkbox";
-import { Label } from "@/components/ui/label";
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { Button } from "@lib/components/button";
+import { Input } from "@lib/components/input";
+import { Textarea } from "@lib/components/textarea";
+import { Checkbox } from "@lib/components/checkbox";
+import { Label } from "@lib/components/label";
+import { Alert, AlertDescription, AlertTitle } from "@lib/components/alert";
+import { Badge } from "@lib/components/badge";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@lib/components/card";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@lib/components/table";
 import { toast } from "sonner";
 import { 
   Info, AlertCircle, CheckCircle2, AlertTriangle, 
   Loader2, Download, Mail, User, ChevronRight,
   Home, Settings, FileText, ChevronDown, Play, Pause, Volume2
 } from "lucide-react";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Switch } from "@/components/ui/switch";
-import { Slider } from "@/components/ui/slider";
-import { Progress } from "@/components/ui/progress";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { RadioGroup, RadioGroupItem } from "@lib/components/radio-group";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@lib/components/select";
+import { Switch } from "@lib/components/switch";
+import { Slider } from "@lib/components/slider";
+import { Progress } from "@lib/components/progress";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@lib/components/tabs";
 import { 
   Breadcrumb, 
   BreadcrumbItem, 
@@ -26,7 +26,7 @@ import {
   BreadcrumbList, 
   BreadcrumbPage, 
   BreadcrumbSeparator 
-} from "@/components/ui/breadcrumb";
+} from "@lib/components/breadcrumb";
 import {
   Pagination,
   PaginationContent,
@@ -35,7 +35,7 @@ import {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
-} from "@/components/ui/pagination";
+} from "@lib/components/pagination";
 import {
   Dialog,
   DialogContent,
@@ -44,7 +44,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog";
+} from "@lib/components/dialog";
 import {
   Sheet,
   SheetContent,
@@ -52,25 +52,25 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/components/ui/sheet";
+} from "@lib/components/sheet";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/components/ui/popover";
+} from "@lib/components/popover";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/components/ui/tooltip";
+} from "@lib/components/tooltip";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Separator } from "@/components/ui/separator";
+} from "@lib/components/accordion";
+import { Avatar, AvatarFallback, AvatarImage } from "@lib/components/avatar";
+import { Separator } from "@lib/components/separator";
 import { useState } from "react";
 
 export default function Components() {

@@ -1,5 +1,6 @@
-import { Toaster } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
+import { Toaster } from "@lib/components/sonner";
+import { TooltipProvider } from "@lib/components/tooltip";
+import { SidebarProvider } from "@lib/components/sidebar";
 import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
@@ -8,25 +9,29 @@ import DashboardLayout from "./components/DashboardLayout";
 import Home from "./pages/Home";
 import Colors from "./pages/Colors";
 import Typography from "./pages/Typography";
+import Spacing from "./pages/Spacing";
 import Components from "./pages/Components";
 import Logo from "./pages/Logo";
 import Documentation from "./pages/Documentation";
 
 function Router() {
   return (
-    <DashboardLayout>
-      <Switch>
-        <Route path={"/"} component={Home} />
-        <Route path={"/colors"} component={Colors} />
-        <Route path={"/typography"} component={Typography} />
-        <Route path={"/components"} component={Components} />
-        <Route path={"/logo"} component={Logo} />
-        <Route path={"/documentation"} component={Documentation} />
-        <Route path={"/404"} component={NotFound} />
-        {/* Final fallback route */}
-        <Route component={NotFound} />
-      </Switch>
-    </DashboardLayout>
+    <SidebarProvider>
+      <DashboardLayout>
+        <Switch>
+          <Route path={"/"} component={Home} />
+          <Route path={"/colors"} component={Colors} />
+          <Route path={"/typography"} component={Typography} />
+          <Route path={"/spacing"} component={Spacing} />
+          <Route path={"/components"} component={Components} />
+          <Route path={"/logo"} component={Logo} />
+          <Route path={"/documentation"} component={Documentation} />
+          <Route path={"/404"} component={NotFound} />
+          {/* Final fallback route */}
+          <Route component={NotFound} />
+        </Switch>
+      </DashboardLayout>
+    </SidebarProvider>
   );
 }
 

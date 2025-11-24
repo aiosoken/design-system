@@ -1,4 +1,4 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@lib/components/card";
 import { Palette, Type, Box, Image, Zap, Shield, Brain, Layers } from "lucide-react";
 
 export default function Home() {
@@ -119,41 +119,45 @@ export default function Home() {
       </div>
 
       {/* Design Principles */}
-      <div className="bg-muted/50 rounded-lg p-8">
-        <h2 className="text-2xl font-bold mb-4">デザイン原則</h2>
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          <div>
-            <h3 className="font-semibold mb-2">明快さ (Clarity)</h3>
-            <p className="text-sm text-muted-foreground">
-              情報は明確で理解しやすく提示します。
-            </p>
+      <Card>
+        <CardHeader>
+          <CardTitle className="text-2xl">デザイン原則</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <div>
+              <h3 className="font-semibold mb-2">明快さ (Clarity)</h3>
+              <p className="text-sm text-muted-foreground">
+                情報は明確で理解しやすく提示します。
+              </p>
+            </div>
+            <div>
+              <h3 className="font-semibold mb-2">先進性 (Innovation)</h3>
+              <p className="text-sm text-muted-foreground">
+                モダンなビジュアル表現により、革新的なブランドイメージを構築します。
+              </p>
+            </div>
+            <div>
+              <h3 className="font-semibold mb-2">信頼感 (Trust)</h3>
+              <p className="text-sm text-muted-foreground">
+                プロフェッショナルな印象により、経営層の信頼を獲得します。
+              </p>
+            </div>
+            <div>
+              <h3 className="font-semibold mb-2">アクセシビリティ (Accessibility)</h3>
+              <p className="text-sm text-muted-foreground">
+                誰もが利用しやすいデザインにより、包括的なコミュニケーションを実現します。
+              </p>
+            </div>
+            <div>
+              <h3 className="font-semibold mb-2">効率性 (Efficiency)</h3>
+              <p className="text-sm text-muted-foreground">
+                再利用可能なコンポーネントにより、迅速な制作を可能にします。
+              </p>
+            </div>
           </div>
-          <div>
-            <h3 className="font-semibold mb-2">先進性 (Innovation)</h3>
-            <p className="text-sm text-muted-foreground">
-              モダンなビジュアル表現により、革新的なブランドイメージを構築します。
-            </p>
-          </div>
-          <div>
-            <h3 className="font-semibold mb-2">信頼感 (Trust)</h3>
-            <p className="text-sm text-muted-foreground">
-              プロフェッショナルな印象により、経営層の信頼を獲得します。
-            </p>
-          </div>
-          <div>
-            <h3 className="font-semibold mb-2">アクセシビリティ (Accessibility)</h3>
-            <p className="text-sm text-muted-foreground">
-              誰もが利用しやすいデザインにより、包括的なコミュニケーションを実現します。
-            </p>
-          </div>
-          <div>
-            <h3 className="font-semibold mb-2">効率性 (Efficiency)</h3>
-            <p className="text-sm text-muted-foreground">
-              再利用可能なコンポーネントにより、迅速な制作を可能にします。
-            </p>
-          </div>
-        </div>
-      </div>
+        </CardContent>
+      </Card>
     </div>
   );
 }

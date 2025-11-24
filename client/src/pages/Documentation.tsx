@@ -1,5 +1,5 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@lib/components/card";
+import { Alert, AlertDescription, AlertTitle } from "@lib/components/alert";
 import { Info, Code, Palette, FileText } from "lucide-react";
 
 export default function Documentation() {
@@ -108,6 +108,28 @@ export default function Documentation() {
   line-height: 1.6;
 }`}
             </pre>
+          </div>
+
+          <div>
+            <h3 className="font-semibold mb-2">4. スペーシングシステム</h3>
+            <p className="text-sm text-muted-foreground mb-3">
+              一貫した余白を保つため、4pxベースのスペーシングスケールを使用します。
+            </p>
+            <pre className="bg-muted p-4 rounded-lg overflow-x-auto text-sm">
+{`/* Tailwind CSS でのスペーシング例 */
+.card {
+  padding: 1.5rem;        /* 24px */
+  margin-bottom: 2rem;    /* 32px */
+}
+
+/* コンポーネント間の余白 */
+.container {
+  @apply space-y-8;       /* 子要素間に32pxの余白 */
+}`}
+            </pre>
+            <p className="text-sm text-muted-foreground mt-2">
+              詳しくは<a href="/spacing" className="text-primary hover:underline">スペーシング</a>ページを参照してください。
+            </p>
           </div>
         </CardContent>
       </Card>
