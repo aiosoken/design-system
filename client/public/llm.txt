@@ -1,0 +1,526 @@
+# AIO Design System - Design Tokens & CSS Rules
+
+> AIO総研のデザインシステム - カラー・スタイルガイド
+
+---
+
+## ブランドカラー
+
+| 名前 | HEX | OKLCH | 用途 |
+|------|-----|-------|------|
+| AIO Orange | `#F25533` | `oklch(0.66 0.18 35)` | プライマリカラー、アクセント、CTA |
+| AIO Blue | `#3054AD` | `oklch(0.48 0.14 265)` | セカンダリカラー、サイドバー |
+
+---
+
+## カラートークン (CSS Variables)
+
+### ライトモード (デフォルト)
+
+```css
+:root {
+  /* Primary - AIO Orange */
+  --primary: oklch(0.66 0.18 35);
+  --primary-foreground: oklch(1 0 0);
+
+  /* Secondary - AIO Blue */
+  --secondary: oklch(0.48 0.14 265);
+  --secondary-foreground: oklch(1 0 0);
+
+  /* Accent - AIO Orange */
+  --accent: oklch(0.66 0.18 35);
+  --accent-foreground: oklch(1 0 0);
+
+  /* Background & Foreground */
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.235 0.015 65);
+
+  /* Card */
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.235 0.015 65);
+
+  /* Popover */
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.235 0.015 65);
+
+  /* Muted */
+  --muted: oklch(0.967 0.001 286.375);
+  --muted-foreground: oklch(0.552 0.016 285.938);
+
+  /* Destructive */
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0 0);
+
+  /* Border & Input */
+  --border: oklch(0.92 0.004 286.32);
+  --input: oklch(0.92 0.004 286.32);
+  --ring: oklch(0.623 0.214 259.815);
+
+  /* Sidebar */
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.235 0.015 65);
+  --sidebar-primary: oklch(0.48 0.14 265);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.967 0.001 286.375);
+  --sidebar-accent-foreground: oklch(0.141 0.005 285.823);
+  --sidebar-border: oklch(0.92 0.004 286.32);
+  --sidebar-ring: oklch(0.623 0.214 259.815);
+
+  /* Chart Colors */
+  --chart-1: var(--color-blue-300);
+  --chart-2: var(--color-blue-500);
+  --chart-3: var(--color-blue-600);
+  --chart-4: var(--color-blue-700);
+  --chart-5: var(--color-blue-800);
+}
+```
+
+### ダークモード
+
+```css
+.dark {
+  /* Primary - Blue in dark mode */
+  --primary: var(--color-blue-700);
+  --primary-foreground: var(--color-blue-50);
+
+  /* Background & Foreground */
+  --background: oklch(0.141 0.005 285.823);
+  --foreground: oklch(0.85 0.005 65);
+
+  /* Card */
+  --card: oklch(0.21 0.006 285.885);
+  --card-foreground: oklch(0.85 0.005 65);
+
+  /* Popover */
+  --popover: oklch(0.21 0.006 285.885);
+  --popover-foreground: oklch(0.85 0.005 65);
+
+  /* Secondary */
+  --secondary: oklch(0.24 0.006 286.033);
+  --secondary-foreground: oklch(0.7 0.005 65);
+
+  /* Muted */
+  --muted: oklch(0.274 0.006 286.033);
+  --muted-foreground: oklch(0.705 0.015 286.067);
+
+  /* Accent */
+  --accent: oklch(0.274 0.006 286.033);
+  --accent-foreground: oklch(0.92 0.005 65);
+
+  /* Destructive */
+  --destructive: oklch(0.704 0.191 22.216);
+  --destructive-foreground: oklch(0.985 0 0);
+
+  /* Border & Input */
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.488 0.243 264.376);
+
+  /* Sidebar */
+  --sidebar: oklch(0.21 0.006 285.885);
+  --sidebar-foreground: oklch(0.85 0.005 65);
+  --sidebar-primary: var(--color-blue-500);
+  --sidebar-primary-foreground: var(--color-blue-50);
+  --sidebar-accent: oklch(0.274 0.006 286.033);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.488 0.243 264.376);
+}
+```
+
+---
+
+## ボーダー半径
+
+```css
+:root {
+  --radius: 0.65rem;          /* 10.4px - 基準値 */
+  --radius-sm: calc(var(--radius) - 4px);   /* 6.4px */
+  --radius-md: calc(var(--radius) - 2px);   /* 8.4px */
+  --radius-lg: var(--radius);               /* 10.4px */
+  --radius-xl: calc(var(--radius) + 4px);   /* 14.4px */
+}
+```
+
+---
+
+## タイポグラフィ
+
+### フォントファミリー
+
+```css
+font-family: 'Inter', 'Noto Sans JP', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+```
+
+### フォントサイズ (Tailwind CSS v4)
+
+| クラス | サイズ |
+|--------|--------|
+| `text-xs` | 12px |
+| `text-sm` | 14px |
+| `text-base` | 16px |
+| `text-lg` | 18px |
+| `text-xl` | 20px |
+| `text-2xl` | 24px |
+| `text-3xl` | 30px |
+| `text-4xl` | 36px |
+
+---
+
+## スペーシング (Tailwind CSS v4)
+
+| 値 | サイズ |
+|----|--------|
+| `1` | 4px |
+| `2` | 8px |
+| `3` | 12px |
+| `4` | 16px |
+| `5` | 20px |
+| `6` | 24px |
+| `8` | 32px |
+| `10` | 40px |
+| `12` | 48px |
+| `16` | 64px |
+
+---
+
+## シャドウ
+
+```css
+/* Tailwind shadow utilities */
+shadow-xs   /* 0 1px 2px 0 rgb(0 0 0 / 0.05) */
+shadow-sm   /* 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1) */
+shadow      /* 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1) */
+shadow-md   /* 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1) */
+shadow-lg   /* 0 25px 50px -12px rgb(0 0 0 / 0.25) */
+```
+
+---
+
+## コンテナ
+
+```css
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;      /* 16px - モバイル */
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding-left: 1.5rem;  /* 24px - タブレット */
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 2rem;    /* 32px - デスクトップ */
+    padding-right: 2rem;
+    max-width: 1280px;
+  }
+}
+```
+
+---
+
+## ブレイクポイント
+
+| 名前 | 幅 |
+|------|-----|
+| `sm` | 640px |
+| `md` | 768px |
+| `lg` | 1024px |
+| `xl` | 1280px |
+| `2xl` | 1536px |
+
+---
+
+## ボタンスタイル
+
+```css
+/* Base button */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 150ms;
+  outline: none;
+}
+
+/* Sizes */
+.button-default { height: 36px; padding: 8px 16px; }
+.button-sm { height: 32px; padding: 6px 12px; }
+.button-lg { height: 40px; padding: 8px 24px; }
+.button-icon { width: 36px; height: 36px; padding: 0; }
+
+/* Variants */
+.button-primary {
+  background: var(--primary);
+  color: var(--primary-foreground);
+}
+.button-primary:hover { opacity: 0.9; }
+
+.button-secondary {
+  background: var(--secondary);
+  color: var(--secondary-foreground);
+}
+.button-secondary:hover { opacity: 0.8; }
+
+.button-outline {
+  background: transparent;
+  border: 1px solid var(--border);
+}
+.button-outline:hover { background: var(--accent); }
+
+.button-ghost {
+  background: transparent;
+}
+.button-ghost:hover { background: var(--accent); }
+
+.button-destructive {
+  background: var(--destructive);
+  color: white;
+}
+.button-destructive:hover { opacity: 0.9; }
+
+.button-link {
+  background: transparent;
+  color: var(--primary);
+  text-decoration-line: underline;
+  text-underline-offset: 4px;
+}
+```
+
+---
+
+## インプットスタイル
+
+```css
+.input {
+  height: 36px;
+  width: 100%;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--input);
+  background: transparent;
+  padding: 4px 12px;
+  font-size: 14px;
+  transition: all 150ms;
+}
+
+.input:focus {
+  border-color: var(--ring);
+  box-shadow: 0 0 0 3px oklch(from var(--ring) l c h / 50%);
+}
+
+.input::placeholder {
+  color: var(--muted-foreground);
+}
+
+.input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Dark mode */
+.dark .input {
+  background: oklch(1 0 0 / 3%);
+}
+```
+
+---
+
+## カードスタイル
+
+```css
+.card {
+  background: var(--card);
+  color: var(--card-foreground);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border);
+  padding: 24px;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+}
+
+.card-header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-bottom: 16px;
+}
+
+.card-title {
+  font-weight: 600;
+  line-height: 1;
+}
+
+.card-description {
+  color: var(--muted-foreground);
+  font-size: 14px;
+}
+
+.card-content {
+  padding-top: 0;
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  padding-top: 16px;
+}
+```
+
+---
+
+## バッジスタイル
+
+```css
+.badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9999px;
+  padding: 2px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.badge-default {
+  background: var(--primary);
+  color: var(--primary-foreground);
+}
+
+.badge-secondary {
+  background: var(--secondary);
+  color: var(--secondary-foreground);
+}
+
+.badge-outline {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--foreground);
+}
+
+.badge-destructive {
+  background: var(--destructive);
+  color: white;
+}
+```
+
+---
+
+## フォーカススタイル
+
+```css
+/* Focus ring */
+:focus-visible {
+  outline: none;
+  border-color: var(--ring);
+  box-shadow: 0 0 0 3px oklch(from var(--ring) l c h / 50%);
+}
+
+/* Invalid state */
+[aria-invalid="true"] {
+  border-color: var(--destructive);
+  box-shadow: 0 0 0 3px oklch(from var(--destructive) l c h / 20%);
+}
+```
+
+---
+
+## カラーユーティリティ
+
+```css
+/* Text colors */
+.text-primary { color: var(--primary); }
+.text-secondary { color: var(--secondary); }
+.text-muted { color: var(--muted-foreground); }
+.text-destructive { color: var(--destructive); }
+
+/* Background colors */
+.bg-primary { background: var(--primary); }
+.bg-secondary { background: var(--secondary); }
+.bg-muted { background: var(--muted); }
+.bg-destructive { background: var(--destructive); }
+.bg-card { background: var(--card); }
+.bg-accent { background: var(--accent); }
+
+/* Border colors */
+.border-primary { border-color: var(--primary); }
+.border-secondary { border-color: var(--secondary); }
+.border-destructive { border-color: var(--destructive); }
+```
+
+---
+
+## ダークモード適用
+
+```html
+<!-- HTML要素に .dark クラスを追加 -->
+<html class="dark">
+  ...
+</html>
+
+<!-- または data属性 -->
+<html data-theme="dark">
+  ...
+</html>
+```
+
+```css
+/* ダークモード用カスタムバリアント */
+@custom-variant dark (&:is(.dark *));
+```
+
+---
+
+## 基本的なHTMLテンプレート
+
+```html
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AIO Design System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: oklch(0.66 0.18 35);
+      --primary-foreground: oklch(1 0 0);
+      --secondary: oklch(0.48 0.14 265);
+      --secondary-foreground: oklch(1 0 0);
+      --background: oklch(1 0 0);
+      --foreground: oklch(0.235 0.015 65);
+      --muted: oklch(0.967 0.001 286.375);
+      --muted-foreground: oklch(0.552 0.016 285.938);
+      --border: oklch(0.92 0.004 286.32);
+      --radius: 0.65rem;
+    }
+    body {
+      font-family: 'Inter', 'Noto Sans JP', sans-serif;
+      background: var(--background);
+      color: var(--foreground);
+    }
+  </style>
+</head>
+<body>
+  <!-- Content -->
+</body>
+</html>
+```
+
+---
+
+## ライセンス
+
+MIT License - AIO Research Institute Inc.
