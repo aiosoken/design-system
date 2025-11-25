@@ -231,12 +231,12 @@ export default function Colors() {
             <div>
               <div
                 className="h-32 rounded-lg flex items-center justify-center text-white font-semibold"
-                style={{ background: "linear-gradient(135deg, #F25533 0%, #3054AD 100%)" }}
+                style={{ background: "linear-gradient(135deg, #F25533 0%, #F25533 30%, #3054AD 100%)" }}
               >
                 オレンジ → ブルー グラデーション
               </div>
               <p className="text-sm text-muted-foreground mt-2 font-mono">
-                background: linear-gradient(135deg, #F25533 0%, #3054AD 100%);
+                background: linear-gradient(135deg, #F25533 0%, #F25533 30%, #3054AD 100%);
               </p>
             </div>
             <div>
