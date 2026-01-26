@@ -1,0 +1,253 @@
+import { Meta, ColorPalette, ColorItem, Typeset } from "@storybook/blocks";
+
+<Meta title="Foundation/Design Tokens" />
+
+# デザイントークン
+
+AIO総研のデザインシステムで使用されるデザイントークンの一覧です。
+これらのトークンはCSS変数として定義され、すべてのコンポーネントで一貫して使用されます。
+
+## ブランドカラー
+
+### Primary Colors
+
+<ColorPalette>
+  <ColorItem
+    title="Primary (Orange)"
+    subtitle="--primary"
+    colors={{
+      "Primary": "#F25533",
+      "Primary Foreground": "#FFFFFF"
+    }}
+  />
+  <ColorItem
+    title="Secondary (Blue)"
+    subtitle="--secondary"
+    colors={{
+      "Secondary": "#3054AD",
+      "Secondary Foreground": "#FFFFFF"
+    }}
+  />
+  <ColorItem
+    title="Accent"
+    subtitle="--accent"
+    colors={{
+      "Accent": "#F25533",
+      "Accent Foreground": "#FFFFFF"
+    }}
+  />
+</ColorPalette>
+
+### Orange Palette
+
+<ColorPalette>
+  <ColorItem
+    title="Orange Scale"
+    subtitle="AIO Orange"
+    colors={{
+      "Orange-100": "#FDEAE5",
+      "Orange-600 (Main)": "#F25533",
+      "Orange-700": "#CE461B"
+    }}
+  />
+</ColorPalette>
+
+### Blue Palette
+
+<ColorPalette>
+  <ColorItem
+    title="Blue Scale"
+    subtitle="AIO Blue"
+    colors={{
+      "Blue-300": "#7890CA",
+      "Blue-600 (Main)": "#3054AD",
+      "Blue-800": "#28366E"
+    }}
+  />
+</ColorPalette>
+
+## セマンティックカラー
+
+### Background & Foreground
+
+<ColorPalette>
+  <ColorItem
+    title="Background"
+    subtitle="--background / --foreground"
+    colors={{
+      "Background": "#FFFFFF",
+      "Foreground": "#1A1A1A"
+    }}
+  />
+  <ColorItem
+    title="Card"
+    subtitle="--card / --card-foreground"
+    colors={{
+      "Card": "#FFFFFF",
+      "Card Foreground": "#1A1A1A"
+    }}
+  />
+  <ColorItem
+    title="Popover"
+    subtitle="--popover / --popover-foreground"
+    colors={{
+      "Popover": "#FFFFFF",
+      "Popover Foreground": "#1A1A1A"
+    }}
+  />
+</ColorPalette>
+
+### Muted & Destructive
+
+<ColorPalette>
+  <ColorItem
+    title="Muted"
+    subtitle="--muted / --muted-foreground"
+    colors={{
+      "Muted": "#F5F5F5",
+      "Muted Foreground": "#666666"
+    }}
+  />
+  <ColorItem
+    title="Destructive"
+    subtitle="--destructive"
+    colors={{
+      "Destructive": "#EF4444",
+      "Destructive Foreground": "#FFFFFF"
+    }}
+  />
+</ColorPalette>
+
+### Border & Input
+
+<ColorPalette>
+  <ColorItem
+    title="Border & Input"
+    subtitle="--border / --input / --ring"
+    colors={{
+      "Border": "#E5E5E5",
+      "Input": "#E5E5E5",
+      "Ring": "#3054AD"
+    }}
+  />
+</ColorPalette>
+
+## Sidebar トークン
+
+<ColorPalette>
+  <ColorItem
+    title="Sidebar"
+    subtitle="--sidebar-*"
+    colors={{
+      "Sidebar": "#FAFAFA",
+      "Sidebar Foreground": "#1A1A1A",
+      "Sidebar Primary": "#3054AD",
+      "Sidebar Primary Foreground": "#FFFFFF"
+    }}
+  />
+  <ColorItem
+    title="Sidebar Accent"
+    subtitle="--sidebar-accent-*"
+    colors={{
+      "Sidebar Accent": "#F5F5F5",
+      "Sidebar Accent Foreground": "#1A1A1A",
+      "Sidebar Border": "#E5E5E5"
+    }}
+  />
+</ColorPalette>
+
+## Chart カラー
+
+<ColorPalette>
+  <ColorItem
+    title="Chart Colors"
+    subtitle="--chart-1 ~ --chart-5"
+    colors={{
+      "Chart 1": "#7890CA",
+      "Chart 2": "#3054AD",
+      "Chart 3": "#2A4A9A",
+      "Chart 4": "#28366E",
+      "Chart 5": "#1E2A5E"
+    }}
+  />
+</ColorPalette>
+
+## Neutral カラー
+
+<ColorPalette>
+  <ColorItem
+    title="Gray Scale"
+    subtitle="ニュートラルカラー"
+    colors={{
+      "White": "#FFFFFF",
+      "Gray-100": "#F5F5F5",
+      "Gray-200": "#E5E5E5",
+      "Gray-400": "#999999",
+      "Gray-600": "#666666",
+      "Gray-800": "#2D2D2D",
+      "Black": "#1A1A1A"
+    }}
+  />
+</ColorPalette>
+
+## フィードバックカラー
+
+<ColorPalette>
+  <ColorItem
+    title="Semantic Feedback"
+    subtitle="システムメッセージ用"
+    colors={{
+      "Success": "#10B981",
+      "Warning": "#F59E0B",
+      "Error": "#EF4444",
+      "Info": "#3054AD"
+    }}
+  />
+</ColorPalette>
+
+## Border Radius
+
+<table className="w-full text-sm my-6">
+  <thead>
+    <tr className="bg-muted">
+      <th className="p-3 text-left border border-border">Token</th>
+      <th className="p-3 text-left border border-border">Value</th>
+      <th className="p-3 text-left border border-border">用途</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td className="p-3 border border-border"><code className="bg-muted px-1.5 py-0.5 rounded text-xs">--radius-sm</code></td><td className="p-3 border border-border"><code className="bg-muted px-1.5 py-0.5 rounded text-xs">calc(var(--radius) - 4px)</code></td><td className="p-3 border border-border">小さい要素</td></tr>
+    <tr><td className="p-3 border border-border"><code className="bg-muted px-1.5 py-0.5 rounded text-xs">--radius-md</code></td><td className="p-3 border border-border"><code className="bg-muted px-1.5 py-0.5 rounded text-xs">calc(var(--radius) - 2px)</code></td><td className="p-3 border border-border">中程度の要素</td></tr>
+    <tr><td className="p-3 border border-border"><code className="bg-muted px-1.5 py-0.5 rounded text-xs">--radius-lg</code></td><td className="p-3 border border-border"><code className="bg-muted px-1.5 py-0.5 rounded text-xs">var(--radius)</code> (0.65rem)</td><td className="p-3 border border-border">標準的な要素</td></tr>
+    <tr><td className="p-3 border border-border"><code className="bg-muted px-1.5 py-0.5 rounded text-xs">--radius-xl</code></td><td className="p-3 border border-border"><code className="bg-muted px-1.5 py-0.5 rounded text-xs">calc(var(--radius) + 4px)</code></td><td className="p-3 border border-border">大きい要素</td></tr>
+  </tbody>
+</table>
+
+## CSS変数の使い方
+
+```css
+/* 背景色の適用 */
+.my-element {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+/* プライマリカラーの適用 */
+.my-button {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+}
+```
+
+## Tailwind での使用
+
+```tsx
+// 背景色
+<div className="bg-background text-foreground">...</div>
+
+// プライマリカラー
+<button className="bg-primary text-primary-foreground">...</button>
+
+// ボーダー
+<div className="border border-border rounded-lg">...</div>
+```

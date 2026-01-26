@@ -1,0 +1,75 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="Introduction" />
+
+# AIO総研 デザインシステム
+
+AIO総研のブランドアイデンティティとUIコンポーネントを定義するデザインシステムです。
+
+## 概要
+
+このデザインシステムは、AIO総研のすべてのデジタル製品で一貫したユーザー体験を提供するために作成されました。
+
+## コンテンツ
+
+### Foundation（基盤）
+
+- **[Design Tokens](?path=/docs/foundation-design-tokens--docs)** - カラー、スペーシング、角丸などのデザイントークン
+- **[Logo](?path=/docs/foundation-logo--docs)** - ロゴのバリエーションと使用ガイドライン
+- **[Media Kit](?path=/docs/foundation-media-kit--docs)** - プレス・パートナー向けアセットダウンロード
+
+### Components（コンポーネント）
+
+- **Button** - ボタンコンポーネント
+- **Input** - 入力フィールド
+- **Card** - カードコンポーネント
+- その他多数...
+
+## ブランドカラー
+
+<div className="flex gap-4 my-6">
+  <div className="flex flex-col items-center">
+    <div className="w-20 h-20 rounded-lg" style={{ backgroundColor: "#F25533" }} />
+    <span className="mt-2 text-xs font-medium">Primary Orange</span>
+    <span className="text-xs text-gray-500">#F25533</span>
+  </div>
+  <div className="flex flex-col items-center">
+    <div className="w-20 h-20 rounded-lg" style={{ backgroundColor: "#3054AD" }} />
+    <span className="mt-2 text-xs font-medium">Primary Blue</span>
+    <span className="text-xs text-gray-500">#3054AD</span>
+  </div>
+</div>
+
+## 技術スタック
+
+<table className="w-full text-sm my-6">
+  <thead>
+    <tr className="bg-muted">
+      <th className="p-3 text-left border border-border">技術</th>
+      <th className="p-3 text-left border border-border">用途</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td className="p-3 border border-border font-semibold">React</td><td className="p-3 border border-border">UIライブラリ</td></tr>
+    <tr><td className="p-3 border border-border font-semibold">Tailwind CSS v4</td><td className="p-3 border border-border">スタイリング</td></tr>
+    <tr><td className="p-3 border border-border font-semibold">Radix UI</td><td className="p-3 border border-border">アクセシブルなプリミティブ</td></tr>
+    <tr><td className="p-3 border border-border font-semibold">CVA</td><td className="p-3 border border-border">バリアント管理</td></tr>
+    <tr><td className="p-3 border border-border font-semibold">Storybook</td><td className="p-3 border border-border">コンポーネントドキュメント</td></tr>
+  </tbody>
+</table>
+
+## 使い方
+
+左側のサイドバーから各カテゴリを選択して、詳細なドキュメントとサンプルを確認してください。
+
+### インストール
+
+```bash
+npm install @aiosoken/design-system
+```
+
+### インポート
+
+```tsx
+import { Button, Card, Input } from "@aiosoken/design-system";
+```
